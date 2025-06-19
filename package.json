@@ -1,0 +1,28 @@
+{
+  "name": "recipe-genius-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-powered web application for generating recipes based on available ingredients and dietary constraints",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start:frontend": "npm run start --workspace=frontend",
+    "start:backend": "npm run start --workspace=backend",
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run start --workspace=frontend\"",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend"
+  },
+  "keywords": [
+    "recipe",
+    "food",
+    "ai",
+    "generator",
+    "meal planning"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
